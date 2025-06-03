@@ -1,0 +1,138 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fae3e3;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Envelope wrapper */
+.envelope-wrapper {
+  position: relative;
+  width: 450px;
+  height: 280px; /* lebih tinggi untuk surat */
+}
+
+/* Amplop */
+.envelope {
+  width: 125%;
+  height: 125%;
+  position: relative;
+  background-color: #ffb6c1;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+  margin-left: -60px; /* supaya amplop tetap di tengah */
+}
+
+/* Flap (tutup amplop) */
+.front.flap {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 625px;
+  height: 050;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-top: 100px solid #ff5c8a;
+  transform-origin: top center;
+  transition: transform 0.6s ease;
+  z-index: 4;
+  position: relative;
+}
+
+/* Logo hati di flap */
+.heart-icon {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+  pointer-events: none;
+  filter: drop-shadow(0 0 1px rgba(248, 6, 244, 0.2));
+}
+
+/* Pocket (bagian depan bawah amplop) */
+.front.pocket {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background-color: #f997ab;
+  z-index: 2;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Surat di dalam amplop */
+.letter {
+  position: absolute;
+  bottom: -45px; /* turunkan surat supaya nggak terlalu ke atas */
+  left: 75px; /* geser sedikit ke kiri untuk tengah */
+  width: 400px;
+  height: 270px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(120%);
+  transition: transform 0.75s ease;
+  z-index: 3;
+  overflow-y: auto;
+}
+
+.envelope.open .letter {
+  transform: translateY(-20%); /* sesuaikan turun sedikit */
+}
+
+/* Teks surat */
+.words {
+  margin: 8px 0;
+  text-align: center;
+  font-style: "pacifico";
+
+  font-size: 12.5px;
+  color: #000000;
+  line-height: 2;
+}
+
+/* Animasi buka amplop */
+.envelope.open .flap {
+  transform: rotateX(150deg);
+}
+
+.envelope.open .letter {
+  transform: translateY(-30%);
+}
+
+/* Tombol */
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+button {
+  background-color: #ec407a;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #d81b60;
+}

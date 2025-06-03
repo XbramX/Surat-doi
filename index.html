@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Love Letter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+
+    <div class="envelope-wrapper">
+      <div class="envelope">
+        <div class="front flap">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="#fff"
+            width="48px"
+            height="48px"
+            class="heart-icon"
+          >
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+                 C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5
+                 c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+            />
+          </svg>
+        </div>
+        <div class="front pocket"></div>
+        <div class="letter">
+          <div class="words">untuk si ....</div>
+          <div class="words">
+            Hai kamu yg lagi baca surat ini, aku cuma mau bilang
+          </div>
+          <div class="words">kalo aku s..........</div>
+          <div class="words">udah ya nanti lagi bahaya kalo ketahuan</div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button id="open">Open</button>
+        <button id="close">Close</button>
+      </div>
+    </div>
+
+    <script>
+      const openBtn = document.getElementById("open");
+      const closeBtn = document.getElementById("close");
+      const envelope = document.querySelector(".envelope");
+
+      openBtn.onclick = () => envelope.classList.add("open");
+      closeBtn.onclick = () => envelope.classList.remove("open");
+    </script>
+  </body>
+</html>
