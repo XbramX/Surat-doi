@@ -19,7 +19,7 @@ body {
 .envelope-wrapper {
   position: relative;
   width: 450px;
-  height: 280px; /* lebih tinggi untuk surat */
+  height: 275px; /* lebih tinggi untuk surat */
 }
 
 /* Amplop */
@@ -55,10 +55,14 @@ body {
   position: absolute;
   top: 30px;
   left: 50%;
+  background-color: #e82e54;
+  border-block-start-color: pink;
+  border-radius: 20%;
+  border-style: inset;
   transform: translateX(-50%);
-  user-select: none;
+  user-select: auto;
   pointer-events: none;
-  filter: drop-shadow(0 0 1px rgba(248, 6, 244, 0.2));
+  filter: drop-shadow(0 0 15px rgba(248, 6, 244, 0.2));
 }
 
 /* Pocket (bagian depan bawah amplop) */
@@ -77,7 +81,7 @@ body {
 .letter {
   position: absolute;
   bottom: -45px; /* turunkan surat supaya nggak terlalu ke atas */
-  left: 75px; /* geser sedikit ke kiri untuk tengah */
+  left: 95px; /* geser sedikit ke kiri untuk tengah */
   width: 400px;
   height: 270px;
   background: white;
@@ -97,8 +101,8 @@ body {
 /* Teks surat */
 .words {
   margin: 8px 0;
-  text-align: center;
-  font-style: "pacifico";
+  text-align: middle center;
+  font-style: "Dancing Script";
 
   font-size: 12.5px;
   color: #000000;
